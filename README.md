@@ -15,12 +15,12 @@ This example shows some simple code for how to use the PCI BAR to
 In this instance, the slave is a Raspberry Pico (which also has some new SPI functions to enable it to work properly as a slave), which can be found in the 'pico' folder.
 
 To build and run:
-'''
+```
     /rpi5-rp1-spi $ mkdir build
     /rpi5-rp1-spi $ cd build
     /rpi5-rp1-spi/build $ cmake ..
     /rpi5-rp1-spi/build $ cmake --build .
-'''
+```
     run with sudo or as root
-'   /rpi5-rp1-spi/build/bin $ sudo ./rpi5-rp1-spi'
+`   /rpi5-rp1-spi/build/bin $ sudo ./rpi5-rp1-spi`
 
