@@ -11,6 +11,7 @@
 *.ilk
 *.map
 *.exp
+*.out
 
 # Precompiled Headers
 *.gch
@@ -50,3 +51,5 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+bin
+build
