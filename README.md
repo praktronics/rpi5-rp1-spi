@@ -30,6 +30,7 @@ There are some utility functions for debugging in the rp1-spi-util.c file. These
 
 If you're using the Pico code provided, then the connection between the Pi5 and pico looks like this.  These are direct wire connections, no pullups etc. required. Note these are **GPIO** numbers, physical pin numbers in brackets:
 | Signal | Pi header GPIO | Pico GPIO |
+|---|---|---|
 | MOSI | GPIO10 (19) | GP16 (21)|
 | MISO | GPIO9 (21) | GP19 (25)|
 | CLK | GPIO11 (23) | GP18 (24)|
