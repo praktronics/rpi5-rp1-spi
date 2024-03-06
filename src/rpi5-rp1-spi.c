@@ -363,6 +363,22 @@ int main(void)
     dump_sr_msg(spi, "Final");
     //dump_all_spi_regs(spi, "All done");
 
+    // get the system clock from the pico
+    printf("Reading system time from the pico\n");
+    uint32_t picotime;
+    res = rp1_spi_write_8_blocking(spi, CMD_READ_SYSTIME);
+    if(res != SPI_OK) {
+        printf("error sending command\n");
+        return 6;
+    }
+    res = rp1_spi_read_8_n_blocking(spi, (uint8_t *)&picotime, 4, 1000);
+    if(res != SPI_OK) {
+        printf("error reading data\n");
+        return 7;
+    }
+
+    printf("picotime: 0x%8X\n", picotime);
+
     printf("done\n");
 
     return 0;
